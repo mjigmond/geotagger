@@ -63,9 +63,9 @@ def arg_parser() -> argparse.Namespace:
     parser.add_argument("images", help="Directory of image files to be geocoded.")
     parser.add_argument("ext", help="Image file format/extension, e.g. JPG|WEBP|TIF")
     group = parser.add_mutually_exclusive_group()
-    group.add_argument("--hours", type=int, default=0, help="Camera datetime offset in hours")
-    group.add_argument("--minutes", type=int, default=0, help="Camera datetime offset in minutes")
-    group.add_argument("--seconds", type=int, default=0, help="Camera datetime offset in seconds")
+    group.add_argument("--hours", type=int, default=0, help="Camera datetime offset in +/- hours")
+    group.add_argument("--minutes", type=int, default=0, help="Camera datetime offset in +/- minutes")
+    group.add_argument("--seconds", type=int, default=0, help="Camera datetime offset in +/- seconds")
     args = parser.parse_args()
     return args
 
